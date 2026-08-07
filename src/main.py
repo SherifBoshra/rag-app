@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from routes import base , data
-from pymongo import AsyncMongoClient
+from motor.motor_asyncio import AsyncIOMotorClient
 from helpers.config import get_settings
 
 app = FastAPI()
