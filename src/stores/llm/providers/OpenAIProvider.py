@@ -10,7 +10,6 @@ class OpenAIProvider(LLMInterface):
                         default_generation_max_output_tokens : int = 1000,
                         default_generation_temperature : float = 0.1):
 
-
         self.api_key = api_key
         self.api_url = api_url
         self.default_input_max_characters = default_input_max_characters
@@ -23,8 +22,8 @@ class OpenAIProvider(LLMInterface):
         self.embedding_size = None
 
         self.client = OpenAI(
-            api_key = self.api_key,
-            api_url = self.api_url
+        api_key=api_key,
+        base_url=api_url
         )
 
         self.logger = logging.getLogger(__name__)
