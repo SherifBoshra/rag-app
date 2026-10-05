@@ -17,7 +17,7 @@ async def startup_span(app: FastAPI):
     app.db_engine = create_async_engine(postgres_conn)
 
     app.db_client = sessionmaker(
-        app.db_engine , class = AsyncSession, expire_on_commit = False
+        app.db_engine , class_ = AsyncSession, expire_on_commit = False
     )
 
     llm_provider_factory = LLMProviderFactory(settings)
